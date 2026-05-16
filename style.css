@@ -1,0 +1,148 @@
+body {
+    font-family: "Arial", sans-serif;
+    background-color: #9EBC8A;
+}
+
+/* Efek Hover & Active 
+*/
+.navbar-nav .nav-link {
+    padding: 10px 15px;
+    /* Tambahkan padding agar efek hover lebih 
+terlihat */
+    border-radius: 5px;
+    /* Membuat sudut melengkung */
+    transition: background-color 0.3s, color 0.3s;
+    /* Efek transisi */
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    background-color: rgba(255, 255, 255, 0.2);
+    /* Warna putih transparan */
+    color: #fff;
+    /* Warna 
+teks tetap putih */
+}
+.custom-navbar {
+  background-color: #9EBC8A; /* ganti dengan warna yang kamu mau */
+}
+
+
+.hero-section {
+    background: linear-gradient(45deg, #537D5D, #73946B);
+    color: white;
+    padding:
+        60px 0;
+    text-align: center;
+}
+
+.hero-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.hero-text {
+  flex: 1 1 300px;
+}
+
+.hero-animation {
+    max-width: 50%;
+    text-align: right;
+}
+
+.hero-animation lottie-player {
+    width: 100%;
+    max-width:
+        400px;
+    height: auto;
+}
+
+.animated-text {
+    font-size: 2rem;
+    font-weight: bold;
+    white-space:
+        nowrap;
+    overflow: hidden;
+    display: inline-block;
+}
+
+@media (max-width: 768px) {
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    /* Animasi 
+hanya untuk mode mobile */
+    .animated-text {
+        border-right: 3px solid white;
+        animation: typing 4s steps(30, end) infinite, blink 0.8s infinite;
+    }
+
+    @keyframes typing {
+        from {
+            width: 0;
+        }
+
+        to {
+            width: 100%;
+        }
+    }
+
+    @keyframes blink {
+        50% {
+            border-color: transparent;
+        }
+    }
+}
+
+@media (min-width: 769px) {
+
+    /* Animasi fade-in berulang untuk mode desktop */
+    .animated-text {
+        opacity:
+            0;
+        animation: fadeInOut 3s ease-in-out infinite;
+    }
+
+    @keyframes fadeInOut {
+        0% {
+            opacity: 0;
+        }
+
+        50% {
+            opacity: 1;
+        }
+
+        100% {
+            opacity: 0;
+        }
+    }
+}
+
+/* Mode Mobile */
+/* Responsive untuk layar kecil */
+@media (max-width: 768px) {
+  .hero-content {
+    flex-direction: column;
+    text-align: center;}
+
+    .hero-text {
+        max-width: 100%;
+    }
+
+     .hero-animation {
+    max-width: 100%;
+    display: block; /* supaya muncul */
+    margin-top: 20px; /* beri jarak dari teks */
+    text-align: center; /* supaya animasi center */
+  }
+
+
+    .animated-text {
+        display: inline-block;
+    }
+}
